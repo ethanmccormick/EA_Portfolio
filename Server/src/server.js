@@ -5,8 +5,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 //We are saving the port of our server into a constant
 app.listen(PORT, () => console.log('Server running on port ${PORT}')) 
-//
-
 
 // Middleware to handle JSON data
 app.use(express.json());
@@ -16,6 +14,6 @@ const fileRoutes = require('./routes/fileRoutes');
 app.use('/api', fileRoutes);
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

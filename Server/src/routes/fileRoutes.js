@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middleware/uploadMiddleware');
-const mysql = require('mysql');
+const { Pool } = require('pg');
 
-const connection = mysql.createConnection({
+const pool = new Pool({
+  user: 'postgres',
   host: 'localhost',
-  user: 'root',
-  password: 'Pyewacket10!',
-  database: 'elliott_andrew_portfolio',
+  database: 'ea-portfolio',
+  password: 'Pyewacket',
+  port: 5432,
 });
 
 
