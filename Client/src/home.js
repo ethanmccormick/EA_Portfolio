@@ -6,12 +6,15 @@ const Home = () => { //in react we work with components, so here I created a com
     return (
         
         <div style ={{paddingLeft: '20px'}}>
-            <h1>Welcome.</h1>
-            <h3>How long do you have?</h3>
-            <ul>
-                <li><Link to="/long">I'm here for a while.</Link></li>
-                <li><Link to="/short">I only have a second.</Link></li>
-            </ul>
+            <h1>How long do you have?</h1>
+            
+                <h3>
+                    <Link to="/long" style={{color: 'black' , textDecoration: 'none'}}>I'm here for a while.</Link>
+                </h3>
+                <h3>
+                    <Link to="/short" style={{color: 'black' , textDecoration: 'none'}}>I only have a second.</Link>
+                </h3>
+            
             
         </div>
     );
